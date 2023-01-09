@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal;
+package com.onesignal;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 

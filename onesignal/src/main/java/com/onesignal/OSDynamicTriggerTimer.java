@@ -1,4 +1,4 @@
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal;
+package com.onesignal;
 
 import java.util.Timer;
 import java.util.TimerTask;

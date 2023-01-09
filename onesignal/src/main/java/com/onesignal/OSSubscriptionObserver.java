@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal;
+package com.onesignal;
 
 public interface OSSubscriptionObserver {
    void onOSSubscriptionChanged(OSSubscriptionStateChanges stateChanges);

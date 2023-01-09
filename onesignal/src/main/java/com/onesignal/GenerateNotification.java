@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal;
+package com.onesignal;
 
 import android.R.drawable;
 import android.app.Activity;
@@ -192,8 +192,8 @@ class GenerateNotification {
 
    private static PendingIntent getNewActionPendingIntent(int requestCode, Intent intent) {
       if (openerIsBroadcast)
-         return PendingIntent.getBroadcast(currentContext, requestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-      return PendingIntent.getActivity(currentContext, requestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+         return PendingIntent.getBroadcast(currentContext, requestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+      return PendingIntent.getActivity(currentContext, requestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT);
    }
 
    private static Intent getNewBaseIntent(int notificationId) {

@@ -1,4 +1,4 @@
-package android.OneSignalSDK.unittest.src.test.java.com.onesignal;
+package com.onesignal;
 
 public class MockOSLog extends OSLogWrapper {
 

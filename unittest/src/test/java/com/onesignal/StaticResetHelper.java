@@ -1,6 +1,6 @@
 // Clears static properties on OneSignal to simulate an app cold start.
 
-package android.OneSignalSDK.unittest.src.test.java.com.onesignal;
+package com.onesignal;
 
 import org.json.JSONArray;
 

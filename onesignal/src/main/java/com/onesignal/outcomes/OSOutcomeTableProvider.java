@@ -1,4 +1,4 @@
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal.outcomes;
+package com.onesignal.outcomes;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;

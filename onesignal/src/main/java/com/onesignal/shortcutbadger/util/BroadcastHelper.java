@@ -1,4 +1,4 @@
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal.shortcutbadger.util;
+package com.onesignal.shortcutbadger.util;
 
 import android.content.Context;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal;
+package com.onesignal;
 
 class UserStateEmail extends UserState {
     UserStateEmail(String inPersistKey, boolean load) {

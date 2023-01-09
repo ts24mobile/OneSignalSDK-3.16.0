@@ -1,4 +1,4 @@
-package android.OneSignalSDK.unittest.src.test.java.com.onesignal;
+package com.onesignal;
 
 import android.renderscript.Sampler;
 import android.webkit.ValueCallback;

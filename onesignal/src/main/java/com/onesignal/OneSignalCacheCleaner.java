@@ -1,4 +1,4 @@
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal;
+package com.onesignal;
 
 import android.content.Context;
 import android.os.Process;

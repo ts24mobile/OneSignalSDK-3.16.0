@@ -1,4 +1,4 @@
-package android.OneSignalSDK.unittest.src.test.java.com.onesignal;
+package com.onesignal;
 
 import org.robolectric.annotation.Implements;
 

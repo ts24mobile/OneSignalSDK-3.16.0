@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-package android.OneSignalSDK.unittest.src.test.java.com.test.onesignal;
+package com.test.onesignal;
 
 import com.onesignal.MockHttpURLConnection;
 import com.onesignal.OneSignal;

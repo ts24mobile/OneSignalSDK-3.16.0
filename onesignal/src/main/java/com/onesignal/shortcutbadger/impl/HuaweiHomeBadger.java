@@ -1,5 +1,5 @@
 // Subpackaged to prevent conflicts with other plugins
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal.shortcutbadger.impl;
+package com.onesignal.shortcutbadger.impl;
 
 import android.annotation.SuppressLint;
 import android.content.ComponentName;

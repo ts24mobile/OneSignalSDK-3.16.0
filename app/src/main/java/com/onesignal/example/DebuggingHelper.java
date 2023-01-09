@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-package android.OneSignalSDK.app.src.main.java.com.onesignal.example;
+package com.onesignal.example;
 
 import java.lang.reflect.Field;
 

@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal;
+package com.onesignal;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -122,7 +122,7 @@ public class OneSignal {
     * An interface used to process a OneSignal notification the user just tapped on.
     * <br/>
     * Set this during OneSignal init in
-    * {@link Builder#setNotificationOpenedHandler(NotificationOpenedHandler) setNotificationOpenedHandler}
+    * {@link OneSignal.Builder#setNotificationOpenedHandler(NotificationOpenedHandler) setNotificationOpenedHandler}
     *<br/><br/>
     * @see <a href="https://documentation.onesignal.com/docs/android-native-sdk#section--notificationopenedhandler-">NotificationOpenedHandler | OneSignal Docs</a>
     */
@@ -138,7 +138,7 @@ public class OneSignal {
     * An interface used to process a OneSignal In-App Message the user just tapped on.
     * <br/>
     * Set this during OneSignal init in
-    * {@link Builder#setInAppMessageClickHandler(InAppMessageClickHandler)}
+    * {@link OneSignal.Builder#setInAppMessageClickHandler(InAppMessageClickHandler)}
     */
    public interface InAppMessageClickHandler {
       /**
@@ -152,7 +152,7 @@ public class OneSignal {
     * An interface used to handle notifications that are received.
     * <br/>
     * Set this during OneSignal init in
-    * {@link Builder#setNotificationReceivedHandler(NotificationReceivedHandler) setNotificationReceivedHandler}
+    * {@link OneSignal.Builder#setNotificationReceivedHandler(NotificationReceivedHandler) setNotificationReceivedHandler}
     *<br/><br/>
     * @see <a href="https://documentation.onesignal.com/docs/android-native-sdk#section--notificationreceivedhandler-">NotificationReceivedHandler | OneSignal Docs</a>
     */
@@ -496,7 +496,7 @@ public class OneSignal {
    private static LocationController.LocationPoint lastLocationPoint;
 
    static boolean shareLocation = true;
-   @NonNull static OneSignal.Builder mInitBuilder = new Builder();
+   @NonNull static OneSignal.Builder mInitBuilder = new OneSignal.Builder();
 
    private static Collection<JSONArray> unprocessedOpenedNotifis = new ArrayList<>();
    private static HashSet<String> postedOpenedNotifIds = new HashSet<>();
@@ -632,7 +632,7 @@ public class OneSignal {
    private static IAPUpdateJob iapUpdateJob;
 
    // Rename to getInitBuilder in 4.0.0
-   public static Builder getCurrentOrNewInitBuilder() {
+   public static OneSignal.Builder getCurrentOrNewInitBuilder() {
       return mInitBuilder;
    }
 
@@ -681,20 +681,20 @@ public class OneSignal {
     * <br/>Follow <a href="https://www.mobomo.com/2011/05/how-to-use-application-object-of-android/">this tutorial</a> to create one.
     * @see <a href="https://documentation.onesignal.com/docs/android-sdk-setup#section-2-add-required-code">Initializing OneSignal</a>
     * @param context The application context
-    * @return a {@link Builder} instance to begin building the OneSignal instance
+    * @return a {@link OneSignal.Builder} instance to begin building the OneSignal instance
     */
-   public static Builder startInit(Context context) {
-      return new Builder(context);
+   public static OneSignal.Builder startInit(Context context) {
+      return new OneSignal.Builder(context);
    }
 
    /**
     * Initializes Onesignal to register the device for push notifications.
-    * Should be called upon a {@link Builder} instance after you've defined options on it.
+    * Should be called upon a {@link OneSignal.Builder} instance after you've defined options on it.
     * <br/><br/>
     * Refer to {@link #startInit(Context)}
     * @param inBuilder
     */
-   private static void init(Builder inBuilder) {
+   private static void init(OneSignal.Builder inBuilder) {
       if (mInitBuilder.mDisplayOptionCarryOver)
          inBuilder.mDisplayOption = mInitBuilder.mDisplayOption;
       mInitBuilder = inBuilder;
@@ -1191,27 +1191,27 @@ public class OneSignal {
       setLogLevel(getLogLevel(inLogCatLevel), getLogLevel(inVisualLogLevel));
    }
 
-   private static LOG_LEVEL getLogLevel(int level) {
+   private static OneSignal.LOG_LEVEL getLogLevel(int level) {
       switch(level) {
          case 0:
-            return LOG_LEVEL.NONE;
+            return OneSignal.LOG_LEVEL.NONE;
          case 1:
-            return LOG_LEVEL.FATAL;
+            return OneSignal.LOG_LEVEL.FATAL;
          case 2:
-            return LOG_LEVEL.ERROR;
+            return OneSignal.LOG_LEVEL.ERROR;
          case 3:
-            return LOG_LEVEL.WARN;
+            return OneSignal.LOG_LEVEL.WARN;
          case 4:
-            return LOG_LEVEL.INFO;
+            return OneSignal.LOG_LEVEL.INFO;
          case 5:
-            return LOG_LEVEL.DEBUG;
+            return OneSignal.LOG_LEVEL.DEBUG;
          case 6:
-            return LOG_LEVEL.VERBOSE;
+            return OneSignal.LOG_LEVEL.VERBOSE;
       }
 
       if (level < 0)
-         return LOG_LEVEL.NONE;
-      return LOG_LEVEL.VERBOSE;
+         return OneSignal.LOG_LEVEL.NONE;
+      return OneSignal.LOG_LEVEL.VERBOSE;
    }
 
    static boolean atLogLevel(LOG_LEVEL level) {
@@ -2545,13 +2545,13 @@ public class OneSignal {
     * Setting to control how OneSignal notifications will be shown when one is received while your app
     * is in focus.
     * <br/><br/>
-    * {@link OSInFocusDisplayOption#Notification Notification} - native notification display while user has app in focus (can be distracting).
+    * {@link OneSignal.OSInFocusDisplayOption#Notification Notification} - native notification display while user has app in focus (can be distracting).
     * <br/>
-    * {@link OSInFocusDisplayOption#InAppAlert In-App Alert (Default)} - native alert dialog display, which can be helpful during development.
+    * {@link OneSignal.OSInFocusDisplayOption#InAppAlert In-App Alert (Default)} - native alert dialog display, which can be helpful during development.
     * <br/>
-    * {@link OSInFocusDisplayOption#None None} - notification is silent.
+    * {@link OneSignal.OSInFocusDisplayOption#None None} - notification is silent.
     *
-    * @param displayOption the {@link OSInFocusDisplayOption OSInFocusDisplayOption} to set
+    * @param displayOption the {@link OneSignal.OSInFocusDisplayOption OSInFocusDisplayOption} to set
     */
    public static void setInFocusDisplaying(OSInFocusDisplayOption displayOption) {
       mInitBuilder.mDisplayOptionCarryOver = true;
@@ -2678,7 +2678,7 @@ public class OneSignal {
                }
 
                @Override
-               void onAnswered(PromptActionResult result) {
+               void onAnswered(OneSignal.PromptActionResult result) {
                   super.onAnswered(result);
                   if (callback != null)
                      callback.onCompleted(result);

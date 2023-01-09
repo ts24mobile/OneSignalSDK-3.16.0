@@ -1,5 +1,3 @@
-package android.OneSignalSDK.onesignal
-
 apply plugin: 'com.android.library'
 
 android {

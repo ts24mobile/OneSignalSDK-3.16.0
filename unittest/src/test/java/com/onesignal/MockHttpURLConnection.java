@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-package android.OneSignalSDK.unittest.src.test.java.com.onesignal;
+package com.onesignal;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

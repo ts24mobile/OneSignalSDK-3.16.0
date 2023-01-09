@@ -1,4 +1,4 @@
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal.influence.model;
+package com.onesignal.influence.model;
 
 import android.support.annotation.NonNull;
 

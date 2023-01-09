@@ -21,7 +21,7 @@
  */
 
 // Namespaced in com.onesignal to prevent class name conflicts if app developer includes the full RootTools library.
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal;
+package com.onesignal;
 
 class RootToolsInternalMethods {
    static boolean isRooted() {

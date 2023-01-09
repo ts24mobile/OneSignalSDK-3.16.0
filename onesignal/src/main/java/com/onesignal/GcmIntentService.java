@@ -28,7 +28,7 @@
  * THE SOFTWARE.
  */
 
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal;
+package com.onesignal;
 
 import android.app.IntentService;
 import android.content.Intent;

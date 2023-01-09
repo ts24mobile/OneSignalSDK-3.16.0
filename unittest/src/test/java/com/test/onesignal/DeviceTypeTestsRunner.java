@@ -1,4 +1,4 @@
-package android.OneSignalSDK.unittest.src.test.java.com.test.onesignal;
+package com.test.onesignal;
 
 import com.onesignal.OneSignal;
 import com.onesignal.ShadowOSUtils;

@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-package android.OneSignalSDK.unittest.src.main.java.com.onesignal.example;
+package com.onesignal.example;
 
 import android.app.Activity;
 import android.os.Bundle;

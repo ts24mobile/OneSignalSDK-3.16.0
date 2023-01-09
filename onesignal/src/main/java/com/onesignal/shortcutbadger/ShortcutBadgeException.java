@@ -1,5 +1,5 @@
 // Subpackaged to prevent conflicts with other plugins
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal.shortcutbadger;
+package com.onesignal.shortcutbadger;
 
 public class ShortcutBadgeException extends Exception {
     public ShortcutBadgeException(String message) {

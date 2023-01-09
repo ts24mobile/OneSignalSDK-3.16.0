@@ -1,5 +1,3 @@
-package android.OneSignalSDK.app
-
 plugins {
     id 'com.onesignal.androidsdk.onesignal-gradle-plugin' version '0.12.6'
 }

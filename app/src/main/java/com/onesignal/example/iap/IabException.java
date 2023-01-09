@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package android.OneSignalSDK.app.src.main.java.com.onesignal.example.iap;
+package com.onesignal.example.iap;
 
 /**
  * Exception thrown when something went wrong with in-app billing.

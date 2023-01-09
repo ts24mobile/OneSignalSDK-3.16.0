@@ -1,4 +1,4 @@
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal.outcomes.domain;
+package com.onesignal.outcomes.domain;
 
 import com.onesignal.OneSignalApiResponseHandler;
 

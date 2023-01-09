@@ -1,4 +1,4 @@
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal.influence.model;
+package com.onesignal.influence.model;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -69,24 +69,24 @@ public class OSInfluence {
         private OSInfluenceType influenceType;
         private OSInfluenceChannel influenceChannel;
 
-        public static Builder newInstance() {
-            return new Builder();
+        public static OSInfluence.Builder newInstance() {
+            return new OSInfluence.Builder();
         }
 
         private Builder() {
         }
 
-        public Builder setIds(@Nullable JSONArray ids) {
+        public OSInfluence.Builder setIds(@Nullable JSONArray ids) {
             this.ids = ids;
             return this;
         }
 
-        public Builder setInfluenceType(@NonNull OSInfluenceType influenceType) {
+        public OSInfluence.Builder setInfluenceType(@NonNull OSInfluenceType influenceType) {
             this.influenceType = influenceType;
             return this;
         }
 
-        public Builder setInfluenceChannel(OSInfluenceChannel influenceChannel) {
+        public OSInfluence.Builder setInfluenceChannel(OSInfluenceChannel influenceChannel) {
             this.influenceChannel = influenceChannel;
             return this;
         }

@@ -1,4 +1,4 @@
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal;
+package com.onesignal;
 
 /*
  * Copyright (C) 2017 The Android Open Source Project
@@ -264,7 +264,7 @@ abstract class JobIntentService extends Service {
      */
     @RequiresApi(26)
     static final class JobServiceEngineImpl extends JobServiceEngine
-       implements CompatJobEngine {
+       implements JobIntentService.CompatJobEngine {
         static final String TAG = "JobServiceEngineImpl";
 
         static final boolean DEBUG = false;
@@ -273,7 +273,7 @@ abstract class JobIntentService extends Service {
         final Object mLock = new Object();
         JobParameters mParams;
 
-        final class WrapperWorkItem implements GenericWorkItem {
+        final class WrapperWorkItem implements JobIntentService.GenericWorkItem {
             final JobWorkItem mJobWork;
 
             WrapperWorkItem(JobWorkItem jobWork) {
@@ -371,7 +371,7 @@ abstract class JobIntentService extends Service {
     }
 
     @RequiresApi(26)
-    static final class JobWorkEnqueuer extends WorkEnqueuer {
+    static final class JobWorkEnqueuer extends JobIntentService.WorkEnqueuer {
         private final JobInfo mJobInfo;
         private final JobScheduler mJobScheduler;
 

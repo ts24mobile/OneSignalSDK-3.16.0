@@ -1,5 +1,3 @@
-package android.OneSignalSDK.unittest
-
 apply plugin: 'com.android.application'
 
 android {

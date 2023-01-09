@@ -1,5 +1,5 @@
 // version 1.1.16 code base
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal.shortcutbadger;
+package com.onesignal.shortcutbadger;
 
 import android.app.Notification;
 import android.content.ComponentName;

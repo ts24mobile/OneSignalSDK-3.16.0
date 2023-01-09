@@ -1,5 +1,5 @@
 // Subpackaged to prevent conflicts with other plugins
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal.shortcutbadger.util;
+package com.onesignal.shortcutbadger.util;
 
 import android.database.Cursor;
 

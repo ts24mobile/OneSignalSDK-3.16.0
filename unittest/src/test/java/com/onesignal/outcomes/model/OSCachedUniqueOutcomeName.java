@@ -1,4 +1,4 @@
-package android.OneSignalSDK.unittest.src.test.java.com.onesignal.outcomes.model;
+package com.onesignal.outcomes.model;
 
 import com.onesignal.influence.model.OSInfluenceChannel;
 

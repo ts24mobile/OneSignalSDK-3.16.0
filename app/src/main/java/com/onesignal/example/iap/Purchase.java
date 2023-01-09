@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package android.OneSignalSDK.app.src.main.java.com.onesignal.example.iap;
+package com.onesignal.example.iap;
 
 import org.json.JSONException;
 import org.json.JSONObject;

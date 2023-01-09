@@ -1,4 +1,4 @@
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal;
+package com.onesignal;
 
 class OneSignalBounceInterpolator implements android.view.animation.Interpolator {
     private double mAmplitude = 1;

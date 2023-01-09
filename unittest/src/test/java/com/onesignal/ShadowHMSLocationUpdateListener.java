@@ -1,4 +1,4 @@
-package android.OneSignalSDK.unittest.src.test.java.com.onesignal;
+package com.onesignal;
 
 import com.huawei.hms.location.HWLocation;
 import com.huawei.hms.location.LocationResult;

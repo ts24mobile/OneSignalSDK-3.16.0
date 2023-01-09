@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-package android.OneSignalSDK.onesignal.src.unity.java.com.onesignal;
+package com.onesignal;
 
 import android.app.Activity;
 import android.support.annotation.Nullable;

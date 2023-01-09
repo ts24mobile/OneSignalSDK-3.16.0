@@ -1,4 +1,4 @@
-package android.OneSignalSDK.onesignal.src.main.java.com.onesignal.language;
+package com.onesignal.language;
 
 import android.support.annotation.NonNull;
 
