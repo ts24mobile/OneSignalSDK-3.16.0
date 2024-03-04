@@ -42,6 +42,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.WorkerThread;
+import android.support.v4.app.ActivityCompat;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -1008,6 +1009,18 @@ public class OneSignal {
       boolean doPrompt = mInitBuilder.mPromptLocation && !promptedLocation;
       // Prompted so we don't ask for permissions more than once
       promptedLocation = promptedLocation || mInitBuilder.mPromptLocation;
+
+      // Luanvm - Begin - check POST NOTFICATION FOR ANDROID 13
+      if(Build.VERSION.SDK_INT >=33)
+      {  int post_notifications = AndroidSupportV4Compat.ContextCompat.checkSelfPermission(appContext, "android.permission.POST_NOTIFICATIONS");
+         if (post_notifications != PackageManager.PERMISSION_GRANTED) {
+            // ACCESS_COARSE_LOCATION permission defined on Manifest, prompt for permission
+            // If permission already given prompt will return positive, otherwise will prompt again or show settings
+            ActivityCompat.requestPermissions(getCurrentActivity(), new String[]{"android.permission.POST_NOTIFICATIONS"}, 3);
+         }
+
+      }
+      // Luanvm - End - check POST NOTFICATION FOR ANDROID 13
 
       LocationController.getLocation(appContext, doPrompt, false, locationHandler);
    }

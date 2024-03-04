@@ -34,6 +34,7 @@ import android.location.Location;
 import android.os.Build;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.support.v4.app.ActivityCompat;
 
 import com.onesignal.AndroidSupportV4Compat.ContextCompat;
 
@@ -173,7 +174,6 @@ class LocationController {
       addPromptHandlerIfAvailable(handler);
       classContext = context;
       locationHandlers.put(handler.getType(), handler);
-
       if (!OneSignal.shareLocation) {
          sendAndClearPromptHandlers(promptLocation, OneSignal.PromptActionResult.ERROR);
          fireFailedComplete();
@@ -187,7 +187,6 @@ class LocationController {
          locationCoarsePermission = ContextCompat.checkSelfPermission(context, "android.permission.ACCESS_COARSE_LOCATION");
          locationCoarse = true;
       }
-
       if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
          if (locationFinePermission != PackageManager.PERMISSION_GRANTED && locationCoarsePermission != PackageManager.PERMISSION_GRANTED) {
             // Permission missing on manifest
@@ -215,7 +214,9 @@ class LocationController {
                      // If permission already given prompt will return positive, otherwise will prompt again or show settings
                      requestPermission = "android.permission.ACCESS_COARSE_LOCATION";
                   }
-               } else {
+               }
+
+               else {
                   OneSignal.onesignalLog(OneSignal.LOG_LEVEL.INFO, "Location permissions not added on AndroidManifest file");
                   result = OneSignal.PromptActionResult.LOCATION_PERMISSIONS_MISSING_MANIFEST;
                }
