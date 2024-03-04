@@ -48,7 +48,8 @@ public class PermissionsActivity extends Activity {
    private static final int DELAY_TIME_CALLBACK_CALL = 500;
    private static final int REQUEST_LOCATION = 2;
    private static final int REQUEST_SETTINGS = 3;
-
+   //Luanvm - add post_notification
+   private static final int REQUEST_POSST_NOTIFICATIONS = 3;
    static boolean waiting, answered, fallbackToSettings, neverAskAgainClicked;
    private static ActivityLifecycleHandler.ActivityAvailableListener activityAvailableListener;
 
@@ -84,7 +85,9 @@ public class PermissionsActivity extends Activity {
          overridePendingTransition(R.anim.onesignal_fade_in, R.anim.onesignal_fade_out);
          return;
       }
-
+      else if(Build.VERSION.SDK_INT >=33) {
+         ActivityCompat.requestPermissions(this, new String[]{"android.permission.POST_NOTIFICATIONS"}, REQUEST_POSST_NOTIFICATIONS);
+      }
       if (!waiting) {
          waiting = true;
          neverAskAgainClicked = !ActivityCompat.shouldShowRequestPermissionRationale(PermissionsActivity.this, LocationController.requestPermission);
